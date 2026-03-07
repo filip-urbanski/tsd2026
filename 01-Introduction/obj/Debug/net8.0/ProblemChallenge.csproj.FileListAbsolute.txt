@@ -1,0 +1,15 @@
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\bin\Debug\net8.0\ProblemChallenge.exe
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\bin\Debug\net8.0\ProblemChallenge.deps.json
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\bin\Debug\net8.0\ProblemChallenge.runtimeconfig.json
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\bin\Debug\net8.0\ProblemChallenge.dll
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\bin\Debug\net8.0\ProblemChallenge.pdb
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\ProblemChallenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\ProblemChallenge.AssemblyInfoInputs.cache
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\ProblemChallenge.AssemblyInfo.cs
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\ProblemChallenge.csproj.CoreCompileInputs.cache
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\ProblemChallenge.sourcelink.json
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\ProblemChallenge.dll
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\refint\ProblemChallenge.dll
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\ProblemChallenge.pdb
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\ProblemChallenge.genruntimeconfig.cache
+C:\Users\filip\OneDrive\Desktop\tsd2026\01-Introduction\obj\Debug\net8.0\ref\ProblemChallenge.dll
