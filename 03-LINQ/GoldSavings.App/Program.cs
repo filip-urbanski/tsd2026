@@ -161,6 +161,24 @@ class Program
             var loadedPrices = ReadPricesFromXml("gold_prices.xml");
             Console.WriteLine($"\nLoaded {loadedPrices.Count} records from XML.");
             
+            Func<int, bool> isLeapYear = year => (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+
+            Console.WriteLine($"Is 2024 a leap year? {isLeapYear(2024)}"); 
+            Console.WriteLine($"Is 2026 a leap year? {isLeapYear(2026)}"); 
+
+            var myRandomList = new RandomList<string>();
+            Console.WriteLine($"Is empty? {myRandomList.IsEmpty()}");
+
+            myRandomList.Add("Apple");
+            myRandomList.Add("Banana");
+            myRandomList.Add("Cherry");
+            myRandomList.Add("Date");
+
+            Console.WriteLine($"Is empty now? {myRandomList.IsEmpty()}");
+
+            string randomItem = myRandomList.Get(3); 
+            Console.WriteLine($"Randomly retrieved item: {randomItem}");
+                        
     }
     public static async Task<List<GoldPrice>> GetAllGoldPricesAsync(GoldDataService dataService, DateTime start, DateTime end)
     {
@@ -169,7 +187,6 @@ class Program
 
         while (currentStart <= end)
         {
-            // Add 92 days to the start date to get a 93-day window inclusive
             DateTime currentEnd = currentStart.AddDays(92);
             if (currentEnd > end) currentEnd = end;
 
@@ -179,7 +196,6 @@ class Program
             currentStart = currentEnd.AddDays(1);
         }
         
-        // DistinctBy ensures we don't have overlapping duplicates just in case
         return allPrices.DistinctBy(p => p.Date).ToList();
     }
 
@@ -195,5 +211,43 @@ class Program
     }
     public static List<GoldPrice> ReadPricesFromXml(string filePath) => 
     (List<GoldPrice>)new System.Xml.Serialization.XmlSerializer(typeof(List<GoldPrice>)).Deserialize(System.Xml.XmlReader.Create(filePath));
+    public class RandomList<T>
+    {
+        private readonly List<T> _items = new List<T>();
+        private readonly Random _random = new Random();
 
+        public void Add(T element)
+        {
+            if (_random.Next(2) == 0)
+            {
+                _items.Insert(0, element); 
+            }
+            else
+            {
+                _items.Add(element);       
+            }
+        }
+
+        public T Get(int index)
+        {
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException("The collection is empty.");
+            }
+            if (index < 0 || index >= _items.Count)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+            }
+
+            
+            int randomIndex = _random.Next(0, index + 1);
+            
+            return _items[randomIndex];
+        }
+
+        public bool IsEmpty()
+        {
+            return _items.Count == 0;
+        }
+    }
 }
